@@ -1,0 +1,87 @@
+
+<!--
+<div class="container">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link" routerLink='/admin/rooms' >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link "  routerLink='/admin/manageRooms' >Rooms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"   routerLink='/admin/manageDevices'>Devices</a>
+          </li>
+          <li class="nav-item">
+                <a class="nav-link"  routerLink='/admin/manageUsers'>Users</a>
+              </li>
+        </ul>
+  
+      </div> -->
+
+
+<!-- 
+     <header>
+          <h1>Welcome Home! </h1>
+        </header>
+            <div class="tabbable tabs-left">
+              <ul class="nav nav-tabs">
+                <li ><a routerLink='/admin/rooms' >Home</a></li>
+                <li><a  routerLink='/admin/manageRooms'> Rooms</a></li>
+                <li><a  routerLink='/admin/manageDevices'>Devices</a></li>
+                <li><a routerLink='/admin/manageUsers'>Users</a></li>
+              </ul>
+              <div class="tab-content">
+              
+                
+    
+              </div>
+            </div> 
+            <router-outlet></router-outlet>
+          -->
+
+
+  
+          <!-- 
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+             
+              <div class="tabs">
+                <input class="tab" type="radio" name="tabs" checked="checked" id="tab--1"/>
+                <input class="tab" type="radio" name="tabs" id="tab--2"/>
+                <input class="tab" type="radio" name="tabs" id="tab--3"/>
+                <input class="tab" type="radio" name="tabs" id="tab--4"/>
+                <label class="button" for="tab--1" id="button--1" routerLink='/admin/rooms' >Home </label>
+                <label class="button" for="tab--2" id="button--2"  routerLink='/admin/manageRooms'> Rooms</label>
+                <label class="button" for="tab--3" id="button--3" routerLink='/admin/manageDevices'>Devices</label>
+                <label class="button" for="tab--4" id="button--4" routerLink='/admin/manageUsers'>Users</label>
+              
+              </div>
+            --> 
+         
+
+
+
+
+   <nav class="navbar navbar-inverse navbar-fixed-top" >
+     
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"  (click)= "showTabs()">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse" id="{{activeTabs}}">
+
+    <ul class="nav navbar-nav ">
+      <li class="active"><a routerLink='/admin/rooms' >Home </a></li>
+      <li><a routerLink='/admin/manageRooms'> Rooms</a></li>
+      <li><a routerLink='/admin/manageDevices'>Devices</a></li>
+      <li><a routerLink='/admin/manageUsers'>Users</a></li>
+      <li><a href="#" class="navbar-link">Log Out</a></li>
+      
+    </ul>
+
+  </div>
+</nav>
+<router-outlet></router-outlet>
+ 

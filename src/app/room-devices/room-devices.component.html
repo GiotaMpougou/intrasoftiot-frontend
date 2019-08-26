@@ -1,0 +1,36 @@
+<!--
+<div *ngIf="getDevices()"> <strong>Devices are: </strong>
+    <li *ngFor="let element of roomDevices ">
+        DEVICE NAME:{{element.name}} TYPE:{{element.type}} STATUS:{{element.status}} INFORMATION:{{element.information}}
+    </li>
+</div>  
+<ng-template #noDevice>
+    <p>No devices in this room!!!</p>
+</ng-template> -->
+
+
+<div class="container" *ngIf="showDevices">
+        <div class="row">
+            <h2 class="mb-4">ROOM DEVICES</h2>
+        </div>
+        <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>NAME</th>
+          <th>TYPE</th>
+          <th>STATUS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let element of roomDevices; let i =index" >
+          <th scope="row">{{i}}</th>
+          <td>{{element.name}}</td>
+          <td>{{element.type}}</td>
+          <td>{{element.information}}</td>
+        </tr>
+        
+      </tbody>
+    </table>
+    </div>
+

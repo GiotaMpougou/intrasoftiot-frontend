@@ -1,0 +1,119 @@
+<!--  
+<form>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Select Room</label>
+            <select class="form-control" id="exampleFormControlSelect1" >
+                <option></option>
+                <option *ngFor="let room of availableRooms;">{{room.name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Select Type Device</label>
+            <select class="form-control" id="exampleFormControlSelect1" >
+                <option></option>
+                <option *ngFor="let type of devicesType;">{{type.name}}</option>
+             </select>
+        </div>
+        <div class="form-group">
+                <label for="exampleFormControlTextarea1">Give Device Name </label>
+                <input type="text" class="form-control" id="exampleFormControlTextarea1" >
+              </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Give Ip-address</label>
+          <input type="text" class="form-control" id="exampleFormControlTextarea1" >
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Device Information</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </form>
+
+  --> 
+
+  <!-- 
+<body>
+  
+  <div><strong> Fill the form to add new device in your home!</strong></div>
+  <form #newDevice = "ngForm" (ngSubmit) = "onClickSubmit(newDevice.value)" >
+        <h3>New device in my home </h3>
+        <div>Select Room<br/>
+        <select type = "text" name = "room"  ngModel required>
+                <option></option>
+                <option *ngFor="let room of availableRooms;">{{room.name}}</option>
+         </select> 
+        </div>
+
+        <div>Select Device type<br/>
+        <select type = "text" name = "type"  ngModel required> 
+                <option></option>
+                <option *ngFor="let type of devicesType;">{{type.name}}</option>
+         </select>  
+        </div> 
+
+       
+        <div>Give Device Name<br/>
+        <input required type = "text" name = "name" placeholder = "device name" ngModel required>
+        </div>
+
+        <div>Give Device Information<br/>
+            <input required type = "text" name = "information" placeholder = "information" ngModel>
+            </div> 
+
+        <div>Give Ip-address<br/>
+        <input type = "text" name = "ipAddress" placeholder = "ip-address" ngModel>
+        </div> 
+
+        <div>
+        <input type = "submit" value = "submit">
+        </div> 
+      </form>
+   
+    </body>
+-->
+
+<form  [formGroup]="myform"
+(ngSubmit)="onClickSubmit()">
+    <h3>New device in my home </h3>
+    
+    <div class="form-group">
+        <label>Select Room</label>
+        <select class="form-control" formControlName="room" required>
+            <option >Please select a room</option>
+            <option *ngFor="let room of availableRooms;" [value]="room.id">{{room.name}}</option>
+        </select>
+      </div>
+
+    
+      <div class="form-group">
+        <label>Select Device type</label>
+        <select class="form-control" formControlName="type" required>
+            <option >Please select a device type</option>
+            <option *ngFor="let type of devicesType;" [value]="type.typeid">{{type.name}}</option>
+        </select>
+      </div>
+    
+
+      <div class="form-group">
+        <label>Give Device Name</label>
+        <input type="text" class="form-control"  placeholder = "device name" formControlName="name" required>
+        </div>
+
+      <div class="form-group">
+        <label>Give Device Information</label>
+        <input type="text" class="form-control"  placeholder = "information" formControlName="information" required>
+        </div>
+
+      <div class="form-group">
+        <label>Give Ip-address</label>
+        <input type="text" class="form-control"  placeholder = "ip-address" formControlName="ipAddress" required>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" class="form-control" >
+      </div>
+
+     
+  </form>
+  
+
+  

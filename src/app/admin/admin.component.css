@@ -1,0 +1,257 @@
+
+/*3*/
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400|Dosis:200,300,400);*/
+/*
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.wrap {
+  margin: auto;
+  padding: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fafafa;
+  overflow: hidden;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.tabs {
+  margin-top: -21px;
+  padding-top: 10px;
+  display: block;
+  position:fixed;
+  width: 10%;
+  height: 100%;
+  float: left;
+  background: #111;
+}
+
+.tab-height, .button {
+  height: 125px;
+ line-height: 125px;
+}
+
+.tab {
+  display: none;
+}
+
+.button {
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  width: 160px;
+  text-align: center;
+  color: #f0f0f0;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.button:hover {
+  background: #ccc;
+  color: #111;
+}
+
+.button:active {
+  color: #ff58a5;
+}
+
+/*
+.display {
+  margin: 0;
+  padding: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 160px);
+  height: 100;
+  background: #fafafa;
+  overflow: hidden;
+}*/
+
+/*black
+.title {
+  margin: 30px 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 30px;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 30px;
+  text-align: center;
+  color: #111;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+p {
+  margin: 30px auto;
+  padding: 0;
+  display: block;
+  position: relative;
+  width: 90%;
+  height: auto;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 20px;
+  text-align: center;
+  color: #111;
+}
+
+#tab--1:checked ~ #button--1,
+#tab--2:checked ~ #button--2,
+#tab--3:checked ~ #button--3,
+#tab--4:checked ~ #button--4 {
+  background: #fafafa;
+  color: #111;
+}
+
+#tab--1:checked ~ #display--1,
+#tab--2:checked ~ #display--2,
+#tab--3:checked ~ #display--3,
+#tab--4:checked ~ #display--4 {
+  display: block;
+}
+ 
+*/
+
+/* burger*/
+
+
+body {
+	padding-top:70px;
+}
+
+
+
+
+.navbar-fixed-top  {
+  height: 100%;
+  width: 164px;
+  float: left;
+  top: 0;
+  position: fixed;
+  border-radius:3px;
+
+  background-color: #111;
+}
+.nav li:first-child{ margin-top: 100px;}
+
+  .nav li a {
+  margin:0;
+  display: block;
+  position: relative;
+  width: 164px;
+  text-align: center;
+  color: #f0f0f0;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+ .nav li a:hover {
+  background: #ccc;
+  color: #111;
+}
+
+
+
+
+@media (max-width: 990px) {
+ 
+  .navbar-toggle {
+      display: block;
+      float: left;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+ 
+  .navbar-nav {
+      float: none!important;
+      margin: 7.5px -15px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+.navbar-fixed-top  {
+ height: initial !important;
+width: 100% !important;}  
+
+
+
+}
+
+
+@media (min-width: 768px){
+
+  .navbar-header {
+  float: none;
+}
+.navbar-collapse.collapse {
+  display: none!important;
+
+}
+#true.navbar-collapse.collapse {
+  display: block!important;
+
+} 
+#true .nav  li a{
+  width: 100%;
+   
+}
+#true .nav li:first-child{ margin-top: 0px;}
+
+}
+@media (min-width: 990px){
+
+  .navbar-collapse.collapse {
+    display: block!important;
+  
+  } 
+
+}
+

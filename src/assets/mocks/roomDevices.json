@@ -1,0 +1,4 @@
+[{"id":1,"name":"AC1","type":"Air Condition","status":"ON","information":"blah","roomId":2},
+    {"id":2,"name":"AC2","type":"Air Condition","status":"OFF","information":"blah","roomId":3},
+    {"id":3,"name":"refr","type":"Refrigerator","status":"On","information":"blah","roomId":1},
+    {"id":4,"name":"coffee mach","type":"Coffee Machine","status":"Off","information":"blah","roomId":1}]
