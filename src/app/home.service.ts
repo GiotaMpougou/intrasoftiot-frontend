@@ -10,6 +10,7 @@ export class HomeService {
   roomDevices:any=[];
   homeRooms:any=[];
   roomId: any ;
+  showBar:boolean;
   constructor() { }
 
  //getDevicesByIdRoom(devices,roomId):Observable< object[]>{
@@ -29,15 +30,11 @@ export class HomeService {
     return this.homeRooms;
   }
   
-  //addHomeRooms(room){
-
-  // this.homeRooms.push(room);
-  // return of(this.homeRooms);
- // }
-
- // removeHomeRooms(index){
-   //  this.homeRooms.splice(index,1)
-   // return of(this.homeRooms);
- // }
+  showSideBar(){
+    return this.showBar=true
+ }
+ hideSideBar(){
+  return this.showBar=false
+}
 
 }

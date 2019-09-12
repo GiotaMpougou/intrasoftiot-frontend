@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {CallService  } from '../call.service';
+import {HomeService  } from '../home.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-add-form-device',
   templateUrl: './add-form-device.component.html',
@@ -17,7 +18,8 @@ export class AddFormDeviceComponent implements OnInit {
   name: FormControl;
   information: FormControl;
   ipAddress: FormControl;
-  constructor(private callService: CallService) { }
+  showBar:boolean ;
+  constructor(private callService: CallService, private homeService: HomeService) { }
 
   ngOnInit() {
     this.showDeviceType();
@@ -63,21 +65,17 @@ export class AddFormDeviceComponent implements OnInit {
     if (this.myform.valid) {
       console.log("Form Submitted!");
       console.log(this.myform.value);
+
     }
     else {
       alert ('Fill out all fields in form!!!')
     }
-      //call service
-     //let params =  {
-    
-     // "name":,
-     // "information":,
-     // "ip_address":,
-     // "roomId":,
-     // "deviceType":{
-      //  "typeid":
-     // }
+  
   }
+
+  sideBarRemove(){
+    this.showBar=this.homeService.hideSideBar()
+ }
   
 
 }

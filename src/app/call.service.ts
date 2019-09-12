@@ -72,6 +72,9 @@ export class CallService {
     return this.http.get<availableDevices>(this.availableDevicesUrl) 
   }
 
+  getRoomTypes(){
+    return this.http.get<availableRooms>(this.availableRoomsUrl) 
+  }
   getAvailableRooms(){
     return this.http.get<availableRooms>(this.availableDevicesUrl) 
   }

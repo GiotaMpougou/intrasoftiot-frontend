@@ -1,5 +1,5 @@
 
-/* Defining Font Families *************************************************** */
+/* /
 .f-prime {
   font-family: 'Oxygen', sans-serif;
   font-weight: 600;
@@ -11,7 +11,7 @@
   font-weight: normal;
 }
 
-/* Defining Font Sizing ***************************************************** */
+
 .large {
   font-size: 2.5rem;
 }
@@ -22,7 +22,7 @@
   font-size: 1.5rem;
 }
 
-/* Defining Font Colors ***************************************************** */
+
 .primes {
   color: #172A3A;
 }
@@ -36,9 +36,57 @@
   border-radius: 5px;
   margin-top:4%;
   background: #95A5A6;
-  /*linear-gradient(110deg, #7C99B4, #161B33);*/
+
 }
 tbody,thead{
   background-color:white;
 }
 tr:hover {background-color:#95A5A6;}
+*/
+
+body {
+  font-family: 'lato', sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  }
+  h2 small {
+    font-size: 0.5em;
+  }
+
+  
+.responsive-table li {
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.responsive-table .table-header {
+   background-color: #95A5A6;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.responsive-table .table-row {
+  background-color: #F8F8F8;
+  box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+}
+.responsive-table .col {
+  flex-basis: 10%;
+}
+
+button{
+margin-right: 20px ;
+}

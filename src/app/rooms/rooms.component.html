@@ -46,9 +46,10 @@
 
 <div class="wrap" *ngFor="let room of rooms; let i =index">
    <div style="position: relative">
-  <figure class="tint ">   
+  <figure class="tint ">  
+        <div> Room-{{room.name}} </div>
     <img src="{{Imgrooms[i].name}}" alt="" width="400" height="260" />
-    <div> Room-{{room.name}} </div>
+    
  
   </figure>
 </div>

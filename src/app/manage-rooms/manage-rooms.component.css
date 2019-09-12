@@ -45,8 +45,30 @@ button{
   margin-right: 20px ;
 }
 
+mat-form-field{
+  margin-left: 22%;
+  margin-right: auto;
+}
 
-  
+
+  h4, p{
+    margin-left:22%;
+   
+  }
+
+  .selectType{
+  margin-top:5%;
+  margin-bottom: 15%;
+ 
+}
+
+jw-modal button.btn {
+  background-color: #95A5A6;
+}
+
+.editType {
+  margin-left:22%;
+}
       
     
   

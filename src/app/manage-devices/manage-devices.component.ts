@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CallService  } from '../call.service';
 import { ModalService } from '../_modal';
-
+import {HomeService  } from '../home.service';
 @Component({
   selector: 'app-manage-devices',
   templateUrl: './manage-devices.component.html',
@@ -11,8 +11,11 @@ import { ModalService } from '../_modal';
 export class ManageDevicesComponent implements OnInit {
   roomAvailableDevices: any=[]; 
   expand: boolean []= [];
- 
-  constructor(private callService: CallService, private modalService: ModalService) { }
+  showFiller:boolean  = false;
+  roomNameId:number; 
+  index:number;
+  showBar:boolean=false;
+  constructor(private callService: CallService,private homeService: HomeService, private modalService: ModalService) { }
 
   ngOnInit() {
     this.showAvailableDevicesByRoom();
@@ -37,14 +40,13 @@ export class ManageDevicesComponent implements OnInit {
   }
  
   expandDevices(index){
-    //this.expand=[]
     this.expand[index]=!this.expand[index];
   }
 
-  removeDevices(roomNameId,index){
-    console.log(roomNameId, index)
+  removeDevices(){
+    
     for(let i = 0 ; i < this.roomAvailableDevices.length; i++ ){
-      if(this.roomAvailableDevices[i].name ==this.roomAvailableDevices[roomNameId].name ) this.roomAvailableDevices[i].devices.splice(index,1)
+      if(this.roomAvailableDevices[i].name ==this.roomAvailableDevices[this.roomNameId].name ) this.roomAvailableDevices[i].devices.splice(this.index,1)
        else console.log('not found')
     }
     this.closeModal('custom-modal-1')
@@ -52,11 +54,19 @@ export class ManageDevicesComponent implements OnInit {
   }
 
 
-   openModal(id: string) {
+   openModal(id: string,roomNameId,index) {
+     console.log("inside modal")
         this.modalService.open(id);
+        this.roomNameId=roomNameId;
+        this.index= index;
+        console.log('removeDevices',roomNameId, index)
     }
 
     closeModal(id: string) {
         this.modalService.close(id);
     }
-}
+   
+    sideBarAdd(){
+      this.showBar=this.homeService.showSideBar()
+   }
+  }

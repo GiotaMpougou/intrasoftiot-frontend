@@ -17,8 +17,8 @@ import { AddFormDeviceComponent} from  './add-form-device/add-form-device.compon
 import { FormsModule} from '@angular/forms'
 import { ModalModule } from './_modal';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { MatFormFieldModule, MatInputModule, MatSelectModule } from  '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
 
 const appRoutes: Routes = [
   { path: "room-devices", component: RoomDevicesComponent},
@@ -32,7 +32,8 @@ const appRoutes: Routes = [
     { path:"rooms",component: RoomsComponent },
     { path:"addDevice", component: AddFormDeviceComponent}
     ]},
-  { path:'', redirectTo:"/rooms", pathMatch: 'full'}
+  { path:'', redirectTo:"/rooms", pathMatch: 'full'},
+  
 ];
 
 @NgModule({
@@ -55,8 +56,10 @@ const appRoutes: Routes = [
     FormsModule,
     ModalModule,
     ReactiveFormsModule,
-    
-    
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,7 @@
     <p>No devices in this room!!!</p>
 </ng-template> -->
 
-
+<!--
 <div class="container" *ngIf="showDevices">
         <div class="row">
             <h2 class="mb-4">ROOM DEVICES</h2>
@@ -32,5 +32,25 @@
         
       </tbody>
     </table>
-    </div>
+    </div> -->
+
+    
+<div class="container" *ngIf="showDevices">
+    <h2>ROOM DEVICES </h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col ">#</div>
+        <div class="col ">NAME</div>
+        <div class="col ">TYPE</div>
+        <div class="col ">STATUS</div>
+      </li>
+      <li class="table-row" *ngFor="let element of roomDevices; let i =index">
+          <div class="col " data-label="3">{{ i +1 }}</div>
+        <div class="col " data-label="NAME">{{element.name}}</div>
+        <div class="col " data-label="TYPE">{{element.type}}</div>
+        <div class="col " data-label="STATUS">{{element.information}}</div>
+      </li>
+ 
+    </ul>
+  </div>
 

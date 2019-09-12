@@ -19,20 +19,7 @@
 		"api_key":"asdasdf1fsd5ASf",
 		"roomId":19, 
 		"deviceType":{"typeid":8,"name":"Light"}}]},
-	
-	{"id":20,
-	"name":"Bathroom",
-	"homeid":1,
-	"devices":[{
-		"id":16,
-		"name":"Light",
-		"status":"on",
-		"information":"blah",
-		"ip_address":"123.12.12.123",
-		"api_key":"asdasdf1fsd5ASf",
-		"roomId":20,
-		"deviceType":{"typeid":8,"name":"Light"}}]},
-	
+
 	{"id":22,
 	"name":"Living Room",
 	"homeid":1,
@@ -40,7 +27,7 @@
 		[{"id":13,
 		"name":"Radio",
 		"status":"off",
-		"information":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"information":"Lorem ipsumet.",
 		"ip_address":"123.12.12.124",
 		"api_key":"asdasdf1fsd5ASf",
 		"roomId":22,
